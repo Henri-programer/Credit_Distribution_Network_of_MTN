@@ -218,10 +218,10 @@ draw_graph(G, pos, nx.closeness_centrality(G, distance=None, wf_improved=True) ,
 
 import missingno as mn  
 
-# Read in the data
+# Read in the data we will need to build the network
 df = pd.read_csv("./Data/CDRtestdata.csv")
-df.head() # Just to have a look at the first observations of the data frame
-mn.matrix(df) # Visualize how much missing variables are in each columns?
+df.head() # We begin by taking a look at the first five rows of the data
+mn.matrix(df) # Visualize missing values in each columns of the dataset
 
 Graph=nx.DiGraph()
 for i,elrow in df.iterrows():
