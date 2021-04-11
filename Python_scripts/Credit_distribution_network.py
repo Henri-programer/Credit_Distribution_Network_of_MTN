@@ -53,7 +53,7 @@ def draw_graph(G, pos, measures, measure_name,path_save):
     plt.savefig(path_save)
     plt.show()
 
-# Loading the first data.
+# Read in the first data.
 df = pd.read_csv("./Data/trydata.csv") # Our dataset is turn into a pandas dataframe
 G = nx.DiGraph()   # Initialize the network as a directed network
 
@@ -218,7 +218,7 @@ draw_graph(G, pos, nx.closeness_centrality(G, distance=None, wf_improved=True) ,
 
 import missingno as mn  
 
-# Loading the data
+# Read in the data
 df = pd.read_csv("./Data/CDRtestdata.csv")
 df.head() # Just to have a look at the first observations of the data frame
 mn.matrix(df) # Visualize how much missing variables are in each columns?
