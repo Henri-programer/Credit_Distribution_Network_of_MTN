@@ -36,11 +36,11 @@ np.random.seed(1984)
 # A CREDIT TERANSFER NETWORK CAN HELP IDENTIFY FRAUDULENT TRANSACTIONS. THE DATA USED HERE WAS SLIGHTLY
 # MODIFIED FOR THIS PURPOSE.
 
-# First, we are defining a simple method to draw the graph and the centrality metrics of nodes with a heat map.
+# Here we write a function to draw both the graph and a centrality heat map.
 def draw_graph(G, pos, measures, measure_name,path_save):
     
     nodes = nx.draw_networkx_nodes(G, pos, node_size=250, cmap=plt.cm.plasma, 
-                                   node_color=list(measures.values()),                   #measures.values(),
+                                   node_color=list(measures.values()),                   
                                    nodelist= measures.keys())
     nodes.set_norm(mcolors.SymLogNorm(linthresh=0.01, linscale=1))
     
